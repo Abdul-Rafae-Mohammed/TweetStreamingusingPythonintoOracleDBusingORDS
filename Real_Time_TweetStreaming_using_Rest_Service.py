@@ -85,7 +85,7 @@ def configure_parameters(file_name):
     twitter_cons_sec = config_params['consumer_secret']
     twitter_access_tok = config_params['access_token']
     twitter_access_sec = config_params['access_secret']
-    rest_endpoint = config_params['post_endpoint']
+    rest_endpoint = config_params['rest_endpoint']
 
     return key,twitter_cons_key,twitter_cons_sec,twitter_access_tok,twitter_access_sec,rest_endpoint
 
@@ -117,5 +117,4 @@ keyword,consumer_key_tw,consumer_secret_tw,access_token_tw,access_secret_tw,rest
 
 
 #Configuration
-tablename = 'TweetData'
 main()

@@ -3,5 +3,4 @@ consumer_key=P5SFPo.................NaRkB
 consumer_secret=k7G.................KIkXIcdwydOLM8M
 access_token=8342334757797.....................4M
 access_secret=QPfmfzWb.........................uj
-post_endpoint=http://xxx.xxx.xxx.xxx:xxxx/ords/xxxx/twitter/demo
-get_endpoint=http://xxx.xxx.xxx.xxx:xxxx/ords/xxxx/twitter/demo
+rest_endpoint=http://xxx.xxx.xxx.xxx:xxxx/ords/xxxx/twitter/demo
