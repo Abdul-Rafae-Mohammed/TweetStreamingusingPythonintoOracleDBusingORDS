@@ -7,9 +7,6 @@ import tweepy as tw
 import simplejson as json
 from tweepy.streaming import StreamListener
 import json
-import string
-import operator
-import ast
 import requests
 import sys
 #######################################################################
