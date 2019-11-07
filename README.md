@@ -4,10 +4,10 @@
 Last Updated:<br>March 01, 2019 
 </td>
 <td class="td-banner">
-# Twitter real time analysis - DBCS + APEX + ORDS + PYTHON
+# Twitter real time data streaming - Oracle DB + APEX + ORDS + PYTHON
 </td></tr><table>
 
-Project to implement real time twitter data analysis using python and Oracle APEX on Oracle Autonomous Database deployed on Oracle Cloud Infrastructure (OCI).
+Project to implement real time twitter data streaming using python and Oracle APEX on Oracle Autonomous Database deployed on Oracle Cloud Infrastructure (OCI).
 
 
 ## Introduction
