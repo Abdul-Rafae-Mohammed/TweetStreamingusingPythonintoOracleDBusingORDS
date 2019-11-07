@@ -7,7 +7,7 @@ Last Updated:<br>March 01, 2019
 # Twitter real time analysis - DBCS + APEX + ORDS + PYTHON
 </td></tr><table>
 
-Project to implement real time twitter data analysis using python and Oracle APEX on Oracle Autonomous Database deployed on Oracle Cloud Infrastructure (OCI) using Docker.
+Project to implement real time twitter data analysis using python and Oracle APEX on Oracle Autonomous Database deployed on Oracle Cloud Infrastructure (OCI).
 
 
 ## Introduction
@@ -19,18 +19,20 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 
-- OCI Database.
+- OCI Database or Autonomous Database.
     - Learn more about provisioning and using Oracle DB by visiting [Documentation](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/create-db-deployment-overview.html) website
 
 - Register a Twitter Application to pull tweets.
 
-- Install Oracle APEX on the server where databse is hosted and ORDS on your local or any remote system
+- For Oracle database on OCI  - Install Oracle APEX on the server where databse is hosted and ORDS on your local or any remote system.
 
 - Configure ORDS to send request to the database instance and to interact with APEX.
 
 - Procedure to install and configure ORDS can be found at this [website](https://docs.oracle.com/database/ords-18.1/AELIG/installing-REST-data-services.htm#AELIG7217) and APEX can be found at this [website](https://docs.oracle.com/en/database/oracle/application-express/18.2/htmig/Installing-AE-and-configuring-LWL-Oracle-HTTP-Server.html#GUID-CDBBB7FD-B436-47F8-AA84-A996AECC8D81)
 
 - Alternatively, you can use the terraform script available at [this]() github repository. Please check the readme to know how to run the script.
+
+- **For Autonomous Database - APEX is provided to you out of the box (you do not have to install it) and can be accessed via the Autonomous Database console.**
 
 
 ## Package Contents
