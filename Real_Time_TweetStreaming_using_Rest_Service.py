@@ -66,9 +66,14 @@ def setAccess(cons_key,cons_sec,access_tok,access_sec):
     return auth
 
 def streamData(auth, term):
-    #twitter_stream = tw.Stream(auth, MyListener())
-    twitter_stream = tw.Stream(auth, MyListener())
-    twitter_stream.filter(track=[term])
+    try :
+        twitter_stream = tw.Stream(auth, MyListener())
+        twitter_stream.filter(track=[term])
+    except KeyboardInterrupt:
+            print "User Interrupt Received."
+            print "Stopping the Application Now...."
+            print "Application stopped!"
+            sys.exit(0)
 
 def configure_parameters(file_name):
     config_fp = open(file_name,'r')
@@ -93,28 +98,41 @@ def configure_parameters(file_name):
 
 #MAIN FUNCTION
 def main():
+    try :
+        
+        #Authentication and Authorization tokens for twitter application
+        consumer_key = consumer_key_tw
+        consumer_secret = consumer_secret_tw
 
-    #Authentication and Authorization tokens for twitter application
-    consumer_key = consumer_key_tw
-    consumer_secret = consumer_secret_tw
+        access_token = access_token_tw
+        access_secret = access_secret_tw
 
-    access_token = access_token_tw
-    access_secret = access_secret_tw
+        auth = setAccess(consumer_key,consumer_secret,access_token,access_secret)
+
+        # Streaming Tweets
+        streamData(auth, keyword)
+        
+    except KeyboardInterrupt:
+            print "User Interrupt Received."
+            print "Stopping the Application Now...."
+            print "Application stopped!"
+            sys.exit(0)
+try :
     
-    auth = setAccess(consumer_key,consumer_secret,access_token,access_secret)
+    parser = argparse.ArgumentParser(description='Configure the parameters.')
+    parser.add_argument('config_file', metavar='config_file', help='The file containing the twitter auth tokens and other configuration parameters.')
+
+    args = parser.parse_args()
+
+    config = args.config_file
+    keyword,consumer_key_tw,consumer_secret_tw,access_token_tw,access_secret_tw,rest_endpoint=configure_parameters(config)
+
+
+    #Configuration
+    main()
     
-    # Streaming Tweets
-    streamData(auth, keyword)
-
-
-parser = argparse.ArgumentParser(description='Configure the parameters.')
-parser.add_argument('config_file', metavar='config_file', help='The file containing the twitter auth tokens and other configuration parameters.')
-
-args = parser.parse_args()
-
-config = args.config_file
-keyword,consumer_key_tw,consumer_secret_tw,access_token_tw,access_secret_tw,rest_endpoint=configure_parameters(config)
-
-
-#Configuration
-main()
+except KeyboardInterrupt:
+            print "User Interrupt Received."
+            print "Stopping the Application Now...."
+            print "Application stopped!"
+            sys.exit(0)
