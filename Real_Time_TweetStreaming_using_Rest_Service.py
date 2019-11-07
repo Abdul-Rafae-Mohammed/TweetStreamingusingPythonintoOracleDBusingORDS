@@ -3,7 +3,6 @@
 #######################################################################
 
 import argparse
-import cx_Oracle as con
 import tweepy as tw
 import simplejson as json
 from tweepy.streaming import StreamListener
