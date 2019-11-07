@@ -1,5 +1,5 @@
 
-# Real Time Twitter Sentiment Analysis using Python, ORDS and Oracle DB Deployed using Docker
+# Real Time Twitter data streaming using Python, APEX and Oracle DB
 
 Last Updated:<br>March 01, 2019 
 </td>
@@ -7,7 +7,7 @@ Last Updated:<br>March 01, 2019
 # Twitter real time analysis - DBCS + APEX + ORDS + PYTHON
 </td></tr><table>
 
-Project to implement real time twitter data analysis using python and Oracle REST Data Services(ORDS) on Oracle Autonomous Database deployed on Oracle Cloud Infrastructure (OCI) using Docker.
+Project to implement real time twitter data analysis using python and Oracle APEX on Oracle Autonomous Database deployed on Oracle Cloud Infrastructure (OCI) using Docker.
 
 
 ## Introduction
